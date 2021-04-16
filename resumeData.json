@@ -1,19 +1,23 @@
 {
   "main": {
     "name": "Anabela Tavares",
-    "occupation": "Mobile Developer / Web Developer",
+    "occupation": [
+      "Mobile Developer",
+      "Web Developer"
+    ],
+    "resumedownload": {
+      "id": "Download CV",
+      "url": "CV - Resume - EN.pdf"
+    },
     "description": "Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
     "image": "profilepic.jpg",
     "bio": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
     "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
+    "email": "anabelaatavares@gmail.com",
     "address": {
-      "city": "Aveiro",
-      "state": "Aveiro"
+      "city": "Estarreja, Aveiro - 3860-636"
     },
-    "website": "https://www.linkedin.com/in/anabelaatavares/",
-    "resumedownload": "http://timbakerdev.com",
+    "website": "https://anabelaatavares.github.io/",
     "social": [
       {
         "name": "linkedin",
@@ -34,110 +38,43 @@
     "skills": [
       {
         "name": "React Native",
-        "level":85
+        "level": 85
       },
       {
         "name": "Ionic Framework",
-        "level":55
+        "level": 55
       },
       {
         "name": "Android",
-        "level":70
+        "level": 70
       },
       {
         "name": "React",
-        "level":60
+        "level": 60
       },
       {
         "name": "CSS",
-        "level":90
+        "level": 90
       },
       {
         "name": "HTML5",
-        "level":80
+        "level": 80
       },
       {
         "name": "Javascript",
-        "level":85
+        "level": 85
       },
       {
         "name": "3Rd SDKs and API(S) integration",
-        "level":75
+        "level": 75
       },
       {
         "name": "Team work",
-        "level":90
+        "level": 90
       },
       {
         "name": "Good Comunication",
-        "level":90
-      }
-    ]
-  },
-  "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
-    "education": [
-      {
-        "id": 0,
-        "school": "Politécnico Da Guarda",
-        "degree": "Master in Mobile Computing",
-        "graduated": "October 2019",
-        "description": "Seminar I/II; Advanced Android Programming; Advanced Databases; Ubiquitous computing; Mobile Distributed Systems; Mobile Networks and Services; Embedded Systems; Sensor Networks; Autonomous Systems"
-      },
-      {
-        "id": 1,
-        "school": "Politécnico Da Guarda",
-        "degree": "Degree in Computer Engineering",
-        "graduated": "September 2013 - September 2016",
-        "description": "Android Programming; Database I & II; Distributed System; Data Modeling; Data Structures & Algorithms; Advance Mathematics; Business Studies; Artificial Intelligence & Robotics; Real-time and Embedded Systems; Network Engineering; Web Programming; Electronics"
-      }
-    ],
-    "work": [
-      {
-        "company": "Loba.cx",
-        "title": "Mobile Developer / Web Developer",
-        "years": "September 2018 - Present",
-        "description": "Development of mobile applications capable of manipulating local resources of the mobile device and / or remote resources through network connections; Development of complex interfaces to provide assistance to third party systems; Web programming using PHP, HTML5, CSS3, Javascript, and APIs, such as Twitter, Google Maps, among others; Collaboration with team members to implement new resource developments"
-      },
-      {
-        "company": "Pingo Doce – Distribuição Alimentar S.A., Estarreja (Portugal), Estarreja",
-        "title": "Operador De Caixa",
-        "years": "December 2011 - February 2014",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      }
-    ]
-  },
-  "portfolio": {
-    "projects": [
-      {
-        "title": "Canadian Wanderlust",
-        "category": "My Travel Blog for my post-university travels",
-        "image": "canadian-wanderlust.jpg",
-        "url": "https://www.canadianwanderlust.com"
-      },
-      {
-        "title": "Fury Fighting Gear",
-        "category": "(offline now) A fighting gear company I started",
-        "image": "fury-fighting-gear.jpg",
-        "url": "http://www.timbakerdev.com"
-      },
-      {
-        "title": "Original Thai Food",
-        "category": "Website I built for a restaurant I like in Thailand",
-        "image": "original-thai-food.jpg",
-        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title": "Resume Website",
-        "category": "A React based resume website template",
-        "image": "resume-website.jpg",
-        "url": "http://www.timbakerdev.com"
-      },
-      {
-        "title": "Smirkspace",
-        "category": "(MVP Only) A React and Meteor based chat University project.",
-        "image": "smirkspace.jpg",
-        "url": "http://www.smirkspace.com"
+        "level": 90
       }
     ]
   }
