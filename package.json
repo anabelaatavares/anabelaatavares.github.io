@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "sass src/styles/scss/main.scss:src/styles/css/style.css && react-scripts build",
+    "build": "sass src/styles/scss/main.scss:public/styles/css/style.css  && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss/main.scss:src/styles/css/style.css",
