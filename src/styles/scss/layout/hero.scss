@@ -4,7 +4,7 @@
     position: relative;
     height: 100vh;
     min-height: 500px;
-    padding: 80px 50px;
+    padding: 80px 10px 50px;
     background-color: $color-primary;
 
     .row {
@@ -29,47 +29,6 @@
           
         }
 
-        .line-text {
-            position: relative;
-            z-index: 15;
-            h1 {
-                position: relative;
-                color: #fff;
-                font-weight: 300;
-                font-size: 1rem;
-                margin-bottom: 20px;
-
-                &::before {
-                    content: "";
-                    display: inline-block;
-                    background-color: $color-accent3;
-                    width: 90px;
-                    height: 3px;
-                    vertical-align: middle;
-                    margin-right: 10px;
-                }
-
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    background-color: $color-accent3;
-                    width: 90px;
-                    height: 3px;
-                    vertical-align: middle;
-                    margin-right: 10px;
-                }
-
-                span {
-                    position: relative;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    margin-top: 5px;
-                }
-            }
-
-            @media (max-width: 500px) {
-            }
-        }
 
         .Typewriter {
             z-index: 15;
@@ -102,6 +61,7 @@
             border: none;
             z-index: 10;
             cursor: pointer;
+            margin: 30px auto 0;
 
             span {
                 font-size: 15px;
@@ -230,6 +190,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 80px 50px;
 
         .content {
             width: auto;

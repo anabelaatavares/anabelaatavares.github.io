@@ -2,103 +2,99 @@
     position: relative;
     background: $color-primary;
     height: 100vh;
-    padding: 100px 0;
+    padding: 50px 0;
 
-    @media (max-width: 991px) {
-        margin-top: 40px;
-    }
-
-    &::before{
-        content: '';
+    &::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: 20vw;
-        height: 100%;
+        width: 100%;
+        height: 150px;
         background: $color-accent;
         z-index: 0;
     }
 
-    .row {
+    .side {
         display: flex;
-        flex-wrap: inherit;
-        overflow: hidden;
-        min-height: 100%;
-        padding: 0;
-        @media (max-width: 911px) {
-            display: block;
-        }
-        .side {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            .baffle_text {
-                display: inline-block;
-                transform: rotate(-90deg);
-                text-align: center;
-                span {
-                    color: $color-default;
-                    font-size: 60px;
-                    margin: 10px 0 20px 0;
-                    line-height: 60px;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    letter-spacing: 10px;
-                }
-            }
-            @media (max-width: 991px) {
-                height: 100px;
-                width: 100%;
-                .baffle_text {
-                    transform: inherit;
-                    span {
-                        font-size: 40px;
-                        line-height: 40px;
-                    }
-                }
-            }
-        }
-        .form {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 0 5%;
-            @media (max-width: 767px) {
-                padding: 30px 50px 50px 50px;
-            }
-            .form-container {
-                margin-top: 20px;
-                input,
-                textarea {
-                    overflow: visible;
-                    height: 50px;
-                    width: 100%;
-                    border: none;
-                    border-bottom: 1px solid #555;
-                    transition: 0.2s;
-                    color: $color-default;
-                    &:focus {
-                        border-bottom: 1px solid #eb83f8;
-                        outline: none;
-                    }
-                    &.error {
-                        border-bottom: 1px solid red;
-                    }
-                }
-            }
-        }
-        .map {
-            padding: 0;
-            iframe {
-                border: none;
-            }
-            @media (max-width: 991px) {
-                margin-top: 50px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        width: 100%;
+        height: 100px;
+
+        .baffle_text {
+            display: inline-block;
+            text-align: center;
+            transform: inherit;
+            span {
+                color: $color-default;
+                margin: 10px 0 20px 0;
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 10px;
             }
         }
     }
-    .submit {
-        margin-top: 40px;
+
+    .profile-pic {
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        margin: 30px auto;
+    }
+
+    .line-text{
+      &.text-white{
+        h5{
+            font-size: 1.8rem;
+            text-decoration: underline;
+            margin-bottom: 0;
+            color: $color-accent3;
+        }
+
+        p{
+            margin-bottom: 20px;
+        }
+        a{
+            display: inline-block;
+            color: $color-default;
+            margin-bottom: 20px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 100px 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20vw;
+            height: 100%;
+            background: $color-accent;
+            z-index: 0;
+        }
+
+        .side {
+            height: calc(100vh - 100px);
+            margin-bottom: 0;
+
+            .baffle_text {
+                transform: rotate(-90deg);
+
+                span {
+                    font-size: 60px;
+                    line-height: 60px;
+                }
+            }
+        }
     }
 }

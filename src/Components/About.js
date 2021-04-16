@@ -15,45 +15,26 @@ class About extends Component {
   }
 
   render() {
-    if (this.props.data) {
-      var name = this.props.data.name;
-      var profilepic = "images/" + this.props.data.image;
-      var description = this.props.data.description;
-      var skills = this.props.data.skills;
-      var bio = this.props.data.bio;
-      var networks = this.props.data.social;
-      var street = this.props.data.address.street;
-      var city = this.props.data.address.city;
-      var state = this.props.data.address.state;
-      var zip = this.props.data.address.zip;
-      var phone = this.props.data.phone;
-      var email = this.props.data.email;
-      var resumeDownload = this.props.data.resumedownload;
-    }
+    const { data } = this.props
 
+    // var profilepic = "images/" + this.props.data.image;
 
     return (
       <section id={this.props.id} className="section-about">
         <div className="container">
           <div className="row">
-            <div className="col-5">
+            <div className="col-12 col-lg-5">
               <div className="content-text">
                 <div className="line-text">
                   <h4>About Me</h4>
                 </div>
-                <h3>{description}</h3>
+                <h3>{data !== undefined && data.description}</h3>
                 <div className="separator" />
-                <p>{bio}</p>
+                <p>{data !== undefined && data.bio}</p>
               </div>
-              <img
-                className="profile-pic"
-                src={profilepic}
-                alt="Tim Baker Profile Pic"
-              />
-
               <div className="social social_icons">
-                {networks !== undefined &&
-                  networks.map((network) => {
+                {data !== undefined && data.social !== undefined &&
+                  data.social.map((network) => {
                     return <a key={network.className} className="social_icon" href={network.url}>
                       <span className={network.className}></span>
                     </a>
@@ -61,46 +42,17 @@ class About extends Component {
                 }
               </div>
             </div>
-            <div className="col-5 offset-2 content-change-color">
+            <div className="col-12 col-lg-5 offset-lg-2 content-change-color">
               <div className="line-text">
                 <h4>My Skills</h4>
               </div>
               <div className="skills-container">
-                {skills !== undefined &&
-                  skills.map((skills) => {
-                    return <Progress key={skills.name} name={skills.name} value={skills.level} delay={1100} />
+                {data !== undefined && data.skills !== undefined &&
+                  data !== undefined && data.skills.map((skill) => {
+                    return <Progress key={skill.name} name={skill.name} value={skill.level} delay={1100} />
                   })
                 }
               </div>
-
-
-              {/* <div className="row">
-                <div className="col-12 columns main-col">
-                  <h2>About Me</h2>
-                  <p>{bio}</p>
-                </div>
-
-                <div className="col-6 columns contact-details">
-                  <h2>Contact Details</h2>
-                  <p className="address">
-                    <span>{name}</span>
-                    <br />
-                    <span>
-                      {street}
-                      {city} {state}, {zip}
-                    </span>
-                    <br />
-                    <span>{phone}</span>
-                    <br />
-                    <span>{email}</span>
-                  </p>
-                </div>
-                <div className="col-6 columns download">
-                  <a href={resumeDownload} className="btn btn-default btn-download">
-                    <i className="fa fa-download"></i>Download Resume
-                    </a>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
