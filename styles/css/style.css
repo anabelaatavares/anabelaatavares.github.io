@@ -10394,6 +10394,101 @@ call-to-action .button {
   overflow-y: hidden !important;
 }
 
+.navigation {
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  z-index: -1000;
+  background-color: #000;
+  height: 100%;
+  z-index: 1000;
+  border-right: 2px solid #fff;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+@media (max-width: 500px) {
+  .navigation {
+    width: 100%;
+  }
+}
+.navigation.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1000;
+  visibility: visible;
+}
+.navigation .closeNav::before {
+  color: #82338d;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.navigation .closeNav:hover {
+  color: #fff;
+}
+.navigation ul {
+  padding: 0;
+}
+.navigation ul li {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 5px;
+  position: relative;
+}
+.navigation ul li button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+.navigation ul li button:focus {
+  outline: none;
+}
+.navigation ul li:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #eb83f8;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+}
+.navigation ul li:hover:after, .navigation ul li.active:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.opener {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  z-index: 50;
+}
+.opener .closeNav {
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.opener .closeNav:hover {
+  color: #eb83f8;
+}
+
 .hero {
   display: flex;
   align-items: center;
