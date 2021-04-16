@@ -1,0 +1,99 @@
+.section-about {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 100px 0;
+    background: $color-primary;
+    height: 100vh;
+
+   
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(50vw + 30px);
+        height: 100%;
+        background: $color-accent;
+        z-index: 0;
+    }
+    
+    .container{
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+    }
+
+    h3 {
+        color: $color-default;
+        font-size: 2rem;
+        margin: 10px 0 20px 0;
+        line-height: calc(1.5 * 2rem);
+        font-weight: 800;
+        @media (max-width: 991px) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+    p {
+        color: $color_default2;
+        font-size: 1rem;
+        line-height: calc(1.5 * 1rem);
+        margin-top: 20px;
+        font-weight: normal;
+    }
+
+    .profile-pic {
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin: 30px auto;
+    }
+
+    .social_icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .social_icon {
+            font-size: 1.8rem;
+            color: $color-default;
+            margin-right: 25px;
+            transition: .2s;
+            cursor: pointer;
+            &:hover {
+                color: $color-accent4;
+            }
+        }
+    }
+
+    .progress-container {
+        margin-bottom: 25px;
+
+        .progress {
+            height: 10px;
+            margin-top: 10px;
+            transition: 2s;
+            background-color:$color-default;
+        }
+
+        .name,
+        .value {
+            font-size: 17px;
+            color: $color-default;
+        }
+        
+        .value {
+            float: right
+        }
+    }
+}

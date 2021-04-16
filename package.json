@@ -1,0 +1,27 @@
+{
+  "name": "personalportfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "baffle-react": "0.0.2",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.2.0",
+    "react-animated-css": "^1.2.1",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.2.0",
+    "react-in-viewport": "^1.0.0-alpha.16",
+    "react-scripts": "1.0.17",
+    "react-scrolllock": "^5.0.1",
+    "scroll-to-element": "^2.0.3",
+    "typewriter-effect": "^2.17.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "sass src/styles/scss:src/styles/css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sass": "sass --watch src/styles/scss/main.scss:src/styles/css/style.css"
+  }
+}

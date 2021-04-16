@@ -1,0 +1,258 @@
+.hero {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    padding: 80px 50px;
+    background-color: $color-primary;
+
+    .row {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5%;
+        color: $color-default;
+        background-color: $color_accent5;
+        width: 100%;
+        height: 100%;
+       
+
+        &-text {
+            width: 100%;
+            text-align: center;
+          
+        }
+
+        .line-text {
+            position: relative;
+            z-index: 15;
+            h1 {
+                position: relative;
+                color: #fff;
+                font-weight: 300;
+                font-size: 1rem;
+                margin-bottom: 20px;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    background-color: $color-accent3;
+                    width: 90px;
+                    height: 3px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    background-color: $color-accent3;
+                    width: 90px;
+                    height: 3px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+
+                span {
+                    position: relative;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-top: 5px;
+                }
+            }
+
+            @media (max-width: 500px) {
+            }
+        }
+
+        .Typewriter {
+            z-index: 15;
+            span {
+                color: $color-default;
+                font-size: 1.5rem;
+                font-weight: 700;
+                &.Typewriter__cursor {
+                    color: $color-accent;
+                }
+            }
+        }
+
+        .hover-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 50px;
+            background: $color-primary6;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 50px;
+            color: $color-default;
+            font-size: 20px;
+            font-family: verdana;
+            letter-spacing: 4px;
+            border: none;
+            z-index: 10;
+            cursor: pointer;
+
+            span {
+                font-size: 15px;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    transition: 1s;
+                    mix-blend-mode: hue;
+                }
+                &:before {
+                    bottom: -2px;
+                    left: -2px;
+                    background: $color-default;
+                }
+                &:after {
+                    bottom: -2px;
+                    right: -2px;
+                    background: $color-accent;
+                }
+            }
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                transition: 1s;
+                mix-blend-mode: hue;
+            }
+            &:before {
+                top: -2px;
+                left: -2px;
+                background: $color-accent;
+            }
+            &:after {
+                top: -2px;
+                right: -2px;
+                background: $color-default;
+            }
+            &:hover:before,
+            &:hover:after,
+            &:hover span:before,
+            &:hover span:after {
+                width: calc(180px / 2);
+                height: calc(50px / 2);
+            }
+            &:focus {
+                outline: none;
+            }
+            &.error {
+                &:before,
+                &:after,
+                span:before,
+                span:after {
+                    background-color: #ff0000;
+                }
+            }
+        }
+    }
+
+    .bubbles {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 100%;
+        z-index: 0;
+        transform: translateZ(0);
+        overflow: hidden;
+
+        span {
+            position: absolute;
+            list-style: none;
+            display: block;
+            background-color: rgba($color: $color-default, $alpha: 0.15);
+            bottom: -100px;
+            animation: circle 15s infinite;
+            transition-timing-function: linear;
+            width: 25px;
+            height: 25px;
+
+           
+            &:nth-child(3n){
+                border-radius: 100%;
+                background-color: rgba($color: $color-accent2, $alpha: 0.80);
+            }
+
+            &:nth-child(4n){
+                border-radius: 20%;
+                background-color: rgba($color: $color-primary3, $alpha: 0.80);
+            }
+            
+        }
+
+        .float-image {
+                &.move-up {
+                animation: up 4s infinite alternate;
+            }
+            &.move-down {
+                animation: down 4s infinite alternate;
+            }
+
+            @keyframes up {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(-50px);
+                }
+            }
+            @keyframes down {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(50px);
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content {
+            width: auto;
+
+            .line-text {
+                h1 {
+                    font-size: 2.5rem;
+
+                    span {
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+
+            .Typewriter {
+                span {
+                    font-size: 3.5rem;
+                }
+            }
+
+            .hover-button {
+                margin: 30px auto 0;
+            }
+        }
+    }
+}
