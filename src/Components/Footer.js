@@ -5,18 +5,6 @@ import BaffleText from './baffle-text/index'
 class Footer extends Component {
   render() {
     const { data } = this.props
-    if (this.props.data) {
-      var networks = this.props.data.social.map(function (network) {
-        return (
-          <li key={network.name}>
-            <a href={network.url}>
-              <i className={network.className}></i>
-            </a>
-          </li>
-        );
-      });
-    }
-
     return (
       <footer id={this.props.id} className="contact">
         <div className="container-fluid">
