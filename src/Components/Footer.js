@@ -5,7 +5,6 @@ import BaffleText from './baffle-text/index'
 class Footer extends Component {
   render() {
     const { data } = this.props
-    console.log(data);
     if (this.props.data) {
       var networks = this.props.data.social.map(function (network) {
         return (
