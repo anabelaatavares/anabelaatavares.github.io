@@ -10778,6 +10778,8 @@ ul#nav li.current button {
   height: 300px;
   border-radius: 100%;
   margin: 30px auto;
+  object-fit: cover;
+  object-position: center;
 }
 .contact .line-text.text-white h5 {
   font-size: 1.8rem;

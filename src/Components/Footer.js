@@ -32,11 +32,14 @@ class Footer extends Component {
             <div className="col-12 col-lg-9 offset-lg-1">
               <div className="line-text text-white">
                 <h4>Get In Touch</h4>
-                <img
-                  className="profile-pic"
-                  src={'https://picsum.photos/300/300'}
-                  alt="Tim Baker Profile Pic"
-                />
+                {
+                  data !== undefined &&
+                  <img
+                    className="profile-pic"
+                    src={`/images/${data.image}`}
+                    alt="Anabela Tavares Profile Pic"
+                  />
+                }
                 <h5><strong>Email</strong></h5> <a href={`mailto:${data !== undefined && data.email}`}>{data !== undefined && data.email}</a>
                 <h5><strong>City</strong> </h5><p>{data !== undefined && data.address.city}  </p>
                 <h5><strong>Website</strong> </h5><p>{data !== undefined && data.website}  </p>

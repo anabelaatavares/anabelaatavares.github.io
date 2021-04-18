@@ -47,6 +47,8 @@
         height: 300px;
         border-radius: 100%;
         margin: 30px auto;
+        object-fit: cover;
+        object-position: center;
     }
 
     .line-text{
