@@ -30,21 +30,21 @@ class Layout extends React.Component {
       window.location.reload()
     }
     this.setState({ height: window.innerHeight, width: window.innerWidth })
-    // if (window.innerWidth < 1025) {
-    //   this.setState({ scrolllock: false })
-    //   if (window.innerWidth < 992) {
-    //     this.setState({ mobile: true })
-    //   }
-    // } else {
-    //   this.setState({ mobile: false, scrolllock: true })
-    // }
+    if (window.innerWidth < 1025) {
+      this.setState({ scrolllock: false })
+      if (window.innerWidth < 992) {
+        this.setState({ mobile: true })
+      }
+    } else {
+      this.setState({ mobile: false, scrolllock: true })
+    }
   }
 
   setDefaults() {
     this.setState({
-      height: window.innerHeight,
-      mobile: false,
-      scrolllock:  true,
+      height: window.innerWidth < 992 ? 'auto' : window.innerHeight,
+      mobile: window.innerWidth < 992 ? true : false,
+      scrolllock: window.innerWidth < 1025 ? false : true,
       width: window.innerWidth,
     })
   }

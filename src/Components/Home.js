@@ -38,9 +38,11 @@ class Home extends Component {
                     }}
                   />
                 </div>
-                <a href={data !== undefined && `documents/${data.resumedownload.url}`} className="hover-button">
-                  <span>{data !== undefined && data.resumedownload.id }</span>
-                </a>
+                {data !== undefined &&
+                  <a href={`documents/${data.resumedownload.url}`} className="hover-button">
+                    <span>{data !== undefined && data.resumedownload.id}</span>
+                  </a>
+                }
                 <div className="bubbles">
                   {this.randomBubbles(200)}
                 </div>
